@@ -1,0 +1,21 @@
+{% extends 'people/base.html' %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Авторизация</title>
+
+</head>
+<body>
+{% block content %}
+<h1>Авторизация</h1>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Войти</button>
+</form>
+
+{% endblock %}
+</body>
+</html>
